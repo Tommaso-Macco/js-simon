@@ -39,11 +39,16 @@ function hiddenNumber() {
 
 const numUtente = [];
 function numberUser() {
-    let num1 = prompt("inserisci il primo Numero");
-    let num2 = prompt("inserisci il secondo Numero");
-    let num3 = prompt("inserisci il terzo Numero");
-    let num4 = prompt("inserisci il quarto Numero");
-    let num5 = prompt("inserisci il quinto Numero");
+    for (let i = 0; i < 5; i++) {
+        let numUtente = prompt("inserisci un numero alla volta")
+        for (let i = 0; i < 5; i++) {
+            if (numUtente[i] === numPc[i]) {
+                contNumber.innerHTML += numUtente[i]
+            }else if (numUtente[i] != numPc[i]) {
+                contNumber.innerHTML += "non hai indovinato il numero"
+            }
+        }
+    }
 }
 
 
