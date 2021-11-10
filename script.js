@@ -8,3 +8,15 @@
 // * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 // *ricordatevi come detto che è facile che i tempi della cancellazione degli elementi in pagina, usando i prompt si sfasino ed è facile che lo vediate funzionare in modo corretto solo su Firefox. Questo è legato al funzionamento del browser e del prompt relativo.
 // Prompt non lo userete poi lavorando effettivamente. (o perlomeno ce lo auguriamo :sorriso_con_goccia_sudore:)
+
+// Iniziamo col collegare una variabile all'html
+
+let contNumber = document.getElementById("textnumber");
+
+// adesso creiamo un array dove andremo ad inserire i 5 numeri casuali
+
+let numPc = []
+// numPc = parseInt(Math.floor(Math.random() * 9));
+
+
+console.log(numPc);
