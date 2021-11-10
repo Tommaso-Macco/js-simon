@@ -14,9 +14,38 @@
 let contNumber = document.getElementById("textnumber");
 
 // adesso creiamo un array dove andremo ad inserire i 5 numeri casuali
+let numPc = [];
+// creiamo e stampiamo i numeri in pagina
+for (let i = 0; i < 5; i++) {
+    // Creiamo 5 numeri massimo di 9
+    let numPc = parseInt(Math.floor(Math.random() * 9));
+    console.log(numPc);
+    // li stampiamo in pagina
+    contNumber.innerHTML += numPc
+}
 
-let numPc = []
-// numPc = parseInt(Math.floor(Math.random() * 9));
+// Adesso mettiamo un timer di 30 secondi dove alla fine di essi verrà chiesto all'utente i numeri che ovviamente saranno oscurati
+
+setTimeout(hiddenNumber, 500);
+setTimeout(numberUser, 1000)
+
+// creiamo la funzione per nascondere i numeri aggiungendo una classe al "contNumber" 
+
+function hiddenNumber() {
+    contNumber.classList.add("hidden");
+}
+
+// Adesso chiediamo all'utente i 5 numeri
+
+const numUtente = [];
+function numberUser() {
+    let num1 = prompt("inserisci il primo Numero");
+    let num2 = prompt("inserisci il secondo Numero");
+    let num3 = prompt("inserisci il terzo Numero");
+    let num4 = prompt("inserisci il quarto Numero");
+    let num5 = prompt("inserisci il quinto Numero");
+}
 
 
-console.log(numPc);
+
+
