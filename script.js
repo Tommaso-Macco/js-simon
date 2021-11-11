@@ -19,11 +19,12 @@ let numPc = [];
 // creiamo e stampiamo i numeri in pagina
 for (let i = 0; i < 5; i++) {
     // Creiamo 5 numeri massimo di 9
-    let numPc = parseInt(Math.floor(Math.random() * 9));
-    console.log(numPc);
+    let num = parseInt(Math.floor(Math.random() * 30));
+    numPc.push(num); // dimenticato controllo duplicati
     // li stampiamo in pagina
-    contNumber.innerHTML += numPc
+    contNumber.innerHTML += numPc;
 }
+console.log(numPc);
 
 // Adesso mettiamo un timer di 30 secondi dove alla fine di essi verrà chiesto all'utente i numeri che ovviamente saranno oscurati
 
@@ -41,16 +42,17 @@ function hiddenNumber() {
 let numUtente = [];
 function numberUser() {
     for (let i = 0; i < 5; i++) {
-        let numListUser = prompt("inserisci un numero alla volta")
+        let numListUser = parseInt(prompt("inserisci un numero alla volta"));
         if (numPc.includes(numListUser)) {
             numUtente.push(numListUser);
         }
     }
-    if (numUtente = "") {
-        contNumberKnow.innerHTML = "non hai indovinato nessun numero"
-    }else {
-        contNumberKnow.innerHTML = "hai indovinato questi numeri", numUtente
-    }
+    console.log(numUtente);
+}
+if (numUtente = "") {
+    contNumberKnow.innerHTML = "non hai indovinato nessun numero";
+}else {
+    contNumberKnow.innerHTML = "hai indovinato questi numeri!";
 }
 
 
