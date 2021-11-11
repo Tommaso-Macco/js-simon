@@ -9,9 +9,10 @@
 // *ricordatevi come detto che è facile che i tempi della cancellazione degli elementi in pagina, usando i prompt si sfasino ed è facile che lo vediate funzionare in modo corretto solo su Firefox. Questo è legato al funzionamento del browser e del prompt relativo.
 // Prompt non lo userete poi lavorando effettivamente. (o perlomeno ce lo auguriamo :sorriso_con_goccia_sudore:)
 
-// Iniziamo col collegare una variabile all'html
+// Iniziamo col collegare due variabili all'html 
 
 let contNumber = document.getElementById("textnumber");
+let contNumberKnow = document.getElementById("numberknow")
 
 // adesso creiamo un array dove andremo ad inserire i 5 numeri casuali
 let numPc = [];
@@ -37,20 +38,19 @@ function hiddenNumber() {
 
 // Adesso chiediamo all'utente i 5 numeri
 
-const numUtente = [];
+let numUtente = [];
 function numberUser() {
     for (let i = 0; i < 5; i++) {
-        let numUtente = prompt("inserisci un numero alla volta")
-        for (let i = 0; i < 5; i++) {
-            if (numUtente[i] === numPc[i]) {
-                contNumber.innerHTML += numUtente[i]
-            }else if (numUtente[i] != numPc[i]) {
-                contNumber.innerHTML += "non hai indovinato il numero"
-            }
+        let numListUser = prompt("inserisci un numero alla volta")
+        if (numPc.includes(numListUser)) {
+            numUtente.push(numListUser);
         }
     }
+    if (numUtente = "") {
+        contNumberKnow.innerHTML = "non hai indovinato nessun numero"
+    }else {
+        contNumberKnow.innerHTML = "hai indovinato questi numeri", numUtente
+    }
 }
-
-
 
 
