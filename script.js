@@ -47,12 +47,13 @@ function numberUser() {
             numUtente.push(numListUser);
         }
     }
+    if (numUtente = "") {
+        contNumberKnow.innerHTML = "non hai indovinato nessun numero";
+    }else {
+        contNumberKnow.innerHTML = "hai indovinato questi numeri!", numUtente;
+    }
     console.log(numUtente);
 }
-if (numUtente = "") {
-    contNumberKnow.innerHTML = "non hai indovinato nessun numero";
-}else {
-    contNumberKnow.innerHTML = "hai indovinato questi numeri!";
-}
+
 
 
